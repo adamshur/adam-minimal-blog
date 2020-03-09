@@ -7,6 +7,15 @@ module.exports = {
     siteTitleAlt: `Minimal Blog - Gatsby Theme`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/content/posts/`,
+      },
+    },
+    `gatsby-plugin-mdx`,
+
     `gatsby-plugin-netlify-cms`,
     {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
